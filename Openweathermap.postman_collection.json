@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "487bfbef-4d42-4836-acb5-8adeaa27f065",
+		"name": "Openweathermap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Current weather data",
+			"description": "",
+			"item": [
+				{
+					"name": "id_1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a495e1a3-3255-48cd-b848-c0210b240d3e",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d69c8d73-947e-430f-b8fb-b7544db4ce5a",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&UA&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "UA",
+									"value": null
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7b2eb0cf-9533-45ae-9a38-0f9fdb888eb5",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&UKR&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "UKR",
+									"value": null
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7b2eb0cf-9533-45ae-9a38-0f9fdb888eb5",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&804 &APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "804 ",
+									"value": null
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_6",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f0c52b7-0af9-4756-b7ce-c2ef79415a6f",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kiev\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?APPID=8e0ad9381401e09c227c4d154334b7d1&id=703448",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								},
+								{
+									"key": "id",
+									"value": "703448"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_8",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f0c52b7-0af9-4756-b7ce-c2ef79415a6f",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kiev\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?lon=30.516666&lat=50.433334&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "lon",
+									"value": "30.516666"
+								},
+								{
+									"key": "lat",
+									"value": "50.433334"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_9",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "73545411-1816-4792-8e90-c7a44a8bc2c8",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"US\"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?zip=02140&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "zip",
+									"value": "02140"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_10",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "12335b4e-8cd1-48fa-a095-d3cc41c59c47",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?zip=02140,UA&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "zip",
+									"value": "02140,UA"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_17",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "33ba47ad-0532-49a6-add3-0f1b8448c21b",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"tests[\"SI system\"] = jsonData.main.temp > 273",
+									"",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_16",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "35d72912-245f-465c-901c-eb084a28f1ae",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"var date = new Date(jsonData.dt*1000);",
+									"var month = date.getMonth();",
+									"tests[\"Units is imperial system(probably)\"] = ((month >3 || month < 11) || (jsonData.main.temp < 273 || jsonData.main.temp > 71));",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&units=imperial&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "units",
+									"value": "imperial"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "id_15",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fc73a0f5-b42a-47ec-a4ba-bceb89824ef3",
+								"type": "text/javascript",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;",
+									"",
+									"var jsonData = JSON.parse(responseBody);",
+									"tests[\"City name is correct\"] = jsonData.name === \"Kyiv\";",
+									"tests[\"Country is correct\"] = jsonData.sys.country === \"UA\"",
+									"tests[\"City coordinates is correct\"] = (jsonData.coord.lat === 49.84 || jsonData.coord.lon === 30.52);",
+									"",
+									"var date = new Date(jsonData.dt*1000);",
+									"var month = date.getMonth();",
+									"tests[\"Units is metric system(probably)\"] = ((month <3 || month != 12) || (jsonData.main.temp > -10 || jsonData.main.temp < 45()));"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "api.openweathermap.org/data/2.5/weather?q=Kyiv&units=metric&APPID=8e0ad9381401e09c227c4d154334b7d1",
+							"host": [
+								"api",
+								"openweathermap",
+								"org"
+							],
+							"path": [
+								"data",
+								"2.5",
+								"weather"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "Kyiv"
+								},
+								{
+									"key": "units",
+									"value": "metric"
+								},
+								{
+									"key": "APPID",
+									"value": "8e0ad9381401e09c227c4d154334b7d1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
